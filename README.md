@@ -36,18 +36,18 @@ This is necessary because Bootstrap-Flask will install that on its own, and havi
 
 ## Using a MySQL database with Flask
 
-See: [Using a MySQL database with Flask](http://bit.ly/mm-remote-mysql ).
+See: [Using a MySQL database with Flask](http://bit.ly/mm-remote-mysql).
 
 **Adding the IP addresses:** See the last page of that document for instructions on how to find the IP addresses for your app at Render.com.
 
 **CHECKLIST**
 
 1. ___ Set up your MySQL database on the server (e.g. Reclaim Hosting).
-2. ___ Edit your Python app file to connect to that remote database. Refer to the document above.
+2. ___ Edit your Python app file to connect to that remote database. Refer to [Using a MySQL database with Flask](http://bit.ly/mm-remote-mysql).
 3. ___ When your Python app works 100 percent *without errors,* make a BACKUP COPY of the app file for safekeeping. Put it into another folder. (Why? because you don't want to upload that file to GitHub — it has your username and password in it!)
-4. ___ Edit the Python app file (NOT the backup) so it uses an environment variable (see link above).
+4. ___ Edit the Python app file (NOT the backup) so it uses an environment variable: [Set environment variable on MacOS](https://bit.ly/mm-env-variable).
 5. ___ Run the app — test it from your own computer until it works perfectly. You are connecting to the remote database with the file on your laptop, using the environment variable.
-6. ___ When it works, follow the deploy instructions: [Deploy a Flask App to Render.com](https://bit.ly/mm-render-flask). NOTE THE BOOTSTRAP CAUTION (Bootstrap5 error) ABOVE!
+6. ___ When it works, follow the deploy instructions: [Deploy a Flask App to Render.com](https://bit.ly/mm-render-flask). Prepare the app for GitHub and push to GitHub *before* you go to Render.com. NOTE THE BOOTSTRAP CAUTION (Bootstrap5 error) ABOVE!
 
 After you commit and publish to GitHub, make sure your repo looks similar to this one. You need a *.gitignore* file and a *requirements.txt* file.
 
