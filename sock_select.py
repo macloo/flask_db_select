@@ -19,6 +19,11 @@ db = SQLAlchemy()
 # create the app
 app = Flask(__name__)
 
+# Bootstrap-Flask requires this line
+bootstrap = Bootstrap5(app)
+# Flask-WTF requires this line
+csrf = CSRFProtect(app)
+
 # using environment variable
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -26,10 +31,6 @@ app.config['SECRET_KEY'] = 'sOmebiGseCretstrIng'
 # initialize the app with Flask-SQLAlchemy
 db.init_app(app)
 
-# Bootstrap-Flask requires this line
-bootstrap = Bootstrap5(app)
-# Flask-WTF requires this line
-csrf = CSRFProtect(app)
 
 # each table in the database needs a class to be created for it
 # db.Model is required - don't change it
